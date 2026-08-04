@@ -1,494 +1,271 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- The design of this website is based on https://nlp.stanford.edu/~johnhew/ and modified by Wenxuan Zhang.
-     PLS ask for permission & add a link to this website before you directly copy and apply to yours -->
+<!--
+The design of this website is based on https://nlp.stanford.edu/~johnhew/ and modified by Wenxuan Zhang (isakzhang AT gmail).
+PLS ask for permission & add a link to this website before you directly copy and apply to yours
+
+NOTE: this page used to hold the publication list; it is now the research agenda.
+      The full list moved to publications.html.
+
+Page shape: agenda (the 15-second version) -> three topic clusters -> the record
+      (grants, then awards). Everything above the first .section-title is about the work;
+      everything below it is about how the work is supported and recognised.
+
+Highlight entry template — one line each, name first so it is the thing people remember:
+  <li class="hl">
+    <a class="hl-name" href="URL">SHORT NAME</a>
+    <span class="hl-desc">— one clause, no full title needed</span>
+    <span class="pub-venue">VENUE YEAR</span>
+  </li>
+-->
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title> Wenxuan Zhang's Homepage </title>
-  <!-- link rel="icon" href="images/nlp_logo.jpg" / -->
+  <title> Research — Wenxuan Zhang </title>
   <meta name="author" content="Wenxuan Zhang">
-  <meta name="keywords" content="Wenxuan Zhang, 张雯轩, Wenxuan Zhang CUHK, Isaac, NLP, Wenxuan Zhang Isaac">
+  <meta name="keywords" content="Wenxuan Zhang, 张雯轩, iNLP Lab, multilingual LLM, multicultural LLM, audio language model, speech LLM, collective intelligence, multi-agent, efficient LLM, LLM evaluation">
   <meta name="robots" content="index,follow">
-  <meta name="description" content="Homepage of Wenxuan Zhang">
+  <meta name="description" content="Research agenda of Wenxuan Zhang and the iNLP Lab at SUTD">
   <link rel="stylesheet" href="./styles.css">
   <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134238626-1"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'UA-134238626-1');
   </script>
-
 </head>
 
 <body>
-  <div class="container content"> 
-  <main>
-  <div class="home">
 
-  <div class="mini-intro">
-  <img class="avatar" src="img/wxzhang-2025-square.jpg" alt="wxzhang-photo">
-
-  <h1 id="wxzhang">Wenxuan Zhang  <span style="font-family:STFangsong">张雯轩</span></h1>
-  
-  <p style="margin: 8px 0 12px;">
-  <code class="language-plaintext highlighter-rouge">wxzhang [at] sutd.edu.sg</code>
-  </p>
-
-  <p style="margin: 0 0 12px; ">
-    National Research Foundation (NRF) Fellow
-  </p>
-
-  <p style="margin: 0 0 16px; line-height: 1.6;">
-    SUTD Assistant Professor<br>
-    Information Systems Technology and Design Pillar<br>
-    Singapore University of Technology and Design
-  </p>
-
-
-  <a href="https://www.sutd.edu.sg/profile/zhang-wenxuan">Faculty Page</a> | <a href="https://scholar.google.com/citations?user=tr7MWA4AAAAJ&hl=en">Google Scholar</a> | <a href="https://www.linkedin.com/in/wenxuan-zhang-608b88153/">LinkedIn</a> | <a href="https://x.com/Wenxuan__Zhang">X (Twitter)</a> | <a href="https://www.xiaohongshu.com/user/profile/64c1d8c40000000014038c63"><span style="font-family:STFangsong">小红书</span></a>
-
-  <br><br>
-
-  <!--Navigation bar-->
-  <div id="menu">
-    <div>
-      <a href="index.html">About</a>
-    </div>
-    <div>
-      <a href="research.html">Publications</a>
-    </div>
-    <div>
-      <a href="group.html">Group</a>
-    </div>
-    <div>
-      <a href="getinvolved.html">Openings</a>
-    </div>
-    <script>
-      $(function () {
-        const current = window.location.pathname.split("/");
-        $('#menu div a').each(function(){
-          const $this = $(this);
-          // if the current path is like this link, make it active
-          if (current.indexOf($this.attr("href")) !== -1) {
-            $this.parent().addClass("now");
-          }
-        })
-      });
-    </script>
+<!-- ===== Top navigation ===== -->
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a class="site-nav-brand" href="index.html">Wenxuan Zhang</a>
+    <ul class="site-nav-links">
+      <li><a href="index.html">About</a></li>
+      <li class="active"><a href="research.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li><a href="group.html">Group</a></li>
+      <li><a href="teaching.html">Teaching &amp; Service</a></li>
+      <li><a href="getinvolved.html">Openings</a></li>
+    </ul>
   </div>
-  <!--end of Navigation bar-->
+</nav>
+<!-- ===== end of navigation ===== -->
 
-  
-  <!--(*: equal contribution, ☨: corresponding author / major supervision)-->
-  For a complete and up-to-date list of publications, see my <a href="https://scholar.google.com/citations?user=tr7MWA4AAAAJ&hl=en">Google Scholar profile</a>.
+<div class="container">
+<main>
 
-  <h3><a name="pub"></a>Recent Preprints</h3> 
-    <ul>    
+  <div class="page-head">
+    <h1>Research</h1>
+    <p class="page-sub">
+      What we work on. The full paper list is on the <a href="publications.html">Publications</a> page and on
+      <a href="https://scholar.google.com/citations?user=tr7MWA4AAAAJ&hl=en">Google Scholar</a>.
+    </p>
+  </div>
+
+  <div class="lede">
+    <p>
+      We work toward AI systems that stay reliable and efficient for diverse people, languages, and real-world settings —
+      increasingly settings where many agents act alongside each other and alongside us. About as much of the work goes
+      into understanding why today's systems fall short as into building ones that don't:
+    </p>
+
+    <ul class="agenda">
       <li>
-        <div id="text" style = "color:#1f57b8"> <span style="color:#c30"><i>[NEW]</i></span> MoltNet: Understanding Social Behavior of AI Agents in the Agent-Native MoltBook </div>
-        Yi Feng, Chen Huang, Zhibo Man, Ryner Tan, Long P. Hoang, Shaoyang Xu, <strong>Wenxuan Zhang</strong>
-        <br>arXiv 2602.13458
-        [<a href="https://arxiv.org/pdf/2602.13458">paper</a>] [<a href="https://inlp-lab.github.io/MoltNet/">project page</a>]
+        <a class="agenda-name" href="#multilingual">Multilingual &amp; Multicultural LLMs</a>
+        <span class="agenda-desc">— understanding how multilinguality works inside a model, and building ones whose competence holds up outside English, in text and in speech</span>
       </li>
-      <p> </p>
-
       <li>
-        <div id="text" style = "color:#1f57b8"> Seallms-audio: Large audio-language models for southeast asia</div>
-        Chaoqun Liu, Mahani Aljunied, Guizhen Chen, Hou Pong Chan, Weiwen Xu, Yu Rong, <strong>Wenxuan Zhang</strong>
-        <br>arXiv 2511.01670
-        [<a href="https://arxiv.org/pdf/2511.01670">paper</a>] [<a href="https://damo-nlp-sg.github.io/SeaLLMs-Audio/">project page</a>] [<a href="https://huggingface.co/SeaLLMs/SeaLLMs-Audio-7B">open models</a>]
+        <a class="agenda-name" href="#collective">Collective Intelligence</a>
+        <span class="agenda-desc">— what populations of AI agents do when they act among each other and with people, e.g., which norms emerge, and whether diversity survives the group</span>
       </li>
-      <p> </p>
-
       <li>
-        <div id="text" style = "color:#1f57b8"> Babel - Open Multilingual Large Language Models Serving Over 90% of Global Speakers</div>
-        Yiran Zhao, Chaoqun Liu, Yue Deng, Jiahao Ying, Mahani Aljunied, Zhaodonghui Li, Lidong Bing, Hou Pong Chan, Yu Rong, Deli Zhao, <strong>Wenxuan Zhang</strong>
-        <br>arXiv 2503.00865
-        [<a href="https://arxiv.org/pdf/2503.00865">paper</a>] [<a href="https://babel-llm.github.io/babel-llm/">project page</a>] [<a href="https://huggingface.co/collections/Tower-Babel/babel-67c172157372d4d6c4b4c6d5">open models</a>]
+        <a class="agenda-name" href="#mechanism">Efficiency &amp; Mechanism</a>
+        <span class="agenda-desc">— what capability costs, and where inside a model it actually lives</span>
       </li>
-      <p> </p>
+    </ul>
+  </div>
+
+  <!-- ---------- Direction 1: no longer narrow in who it serves ---------- -->
+  <div class="cluster" id="multilingual">
+    <h3>Multilingual &amp; Multicultural LLMs</h3>
+    <p class="cluster-tagline">
+      <!-- Multilingual competence is uneven across different languages and cultural contexts. We work on the mechanisms behind
+      that, and build models (in text and in speech) that hold up outside a few high-resource languages. -->
+      Two overviews:
+      <a href="https://ojs.aaai.org/index.php/AAAI/article/view/41365">an AAAI 2026 talk</a> on the research agenda, and
+      <a href="https://open.spotify.com/episode/5BKRSUdU1jh3dGzCVeEUf7">a podcast conversation</a> (2025) on open models.
+    </p>
+    <ul class="hl-list">
+      <li class="hl">
+        <a class="hl-name" href="https://arxiv.org/abs/2601.11227">Language of Thought</a>
+        <span class="hl-desc">— the language(s) a model thinks in shapes how diverse its outputs are</span>
+        <span class="pub-venue">ACL 2026</span>
+      </li>
+      <li class="hl">
+        <a class="hl-name" href="https://arxiv.org/abs/2506.09890">Abstract Thought</a>
+        <span class="hl-desc">— evidence that LLMs reason in a space beyond any single language</span>
+        <span class="pub-venue">NeurIPS 2025</span>
+      </li>
+      <li class="hl">
+        <a class="hl-name" href="https://arxiv.org/abs/2505.24635">Language vs. Culture</a>
+        <span class="hl-desc">— separating the two, which multilingual evaluation routinely conflates</span>
+        <span class="pub-venue">ACL 2025</span>
+      </li>
+      <li class="hl">
+        <a class="hl-name" href="https://arxiv.org/abs/2402.18815">How LLMs Handle Multilingualism</a>
+        <span class="hl-desc">— the internal pathway a multilingual query actually takes through a model</span>
+        <span class="pub-venue">NeurIPS 2024</span>
+      </li>
+      <li class="hl">
+        <a class="hl-name" href="https://arxiv.org/abs/2310.06474">Multilingual Jailbreak</a>
+        <span class="hl-desc">— safety alignment does not survive the trip into lower-resource languages</span>
+        <span class="pub-venue">ICLR 2024</span>
+      </li>
     </ul>
 
-  <h3><a name="pub"></a>Selected Publications</h3> 
-  <ul>
-      <li>
-        <div id="text" style = "color:#1f57b8">Language of Thought Shapes Output Diversity in Large Language Models</div>
-        Shaoyang Xu, <strong>Wenxuan Zhang</strong>
-        <br>ACL 2026
-        [<a href="https://arxiv.org/abs/2601.11227">paper</a>] [<a href="https://github.com/iNLP-Lab/Multilingual-LoT-Diversity">code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">DR-Arena: an Automated Evaluation Framework for Deep Research Agents</div>
-        Yiwen Gao, Ruochen Zhao, Yang Deng, <strong>Wenxuan Zhang</strong>
-        <br>ACL 2026
-        [<a href="https://arxiv.org/abs/2601.10504">paper</a>] [<a href="https://inlp-lab.github.io/DR-Arena/">project page</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">Pardon? Evaluating Conversational Repair in Large Audio-Language Models</div>
-        Shuanghong Huang, Jinlei Xu, Youchao Zhou, Yanghao Zhou, Xuan Zhao, Chong Feng, <strong>Wenxuan Zhang</strong>
-        <br>ACL-Findings 2026
-        [<a href="https://arxiv.org/pdf/2601.12973">paper</a>] [<a href="https://github.com/sheunghung/EAR">code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8"> Difficulty–Diversity Collaborative Filtering for Data-Efficient LLM Fine-Tuning</div>
-        Long P. Hoang, <strong>Wenxuan Zhang</strong>, Wei Lu 
-        <br>ICLR 2026
-        [<a href="https://openreview.net/forum?id=n9mXlqD2SJ">paper</a>] [<a href="">code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8"> PEAR: Phase Entropy Aware Reward for Efficient Reasoning</div>
-        Chen Huang, Wei Lu, <strong>Wenxuan Zhang</strong>
-        <br>ICLR 2026
-        [<a href="https://arxiv.org/pdf/2510.08026">paper</a>] [<a href="https://github.com/iNLP-Lab/PEAR">code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8"> SpaCE-Eval: A Benchmark for Real-World Multi-Modal Reasoning</div>
-        Xuyou Yang, Yucheng Zhao <strong>Wenxuan Zhang</strong>, Immanuel Koh 
-        <br>ICLR 2026
-        [<a href="https://openreview.net/forum?id=VAEkLS9VBr">paper</a>] [<a href="">code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8"> RAVENEA: A Benchmark for Multimodal Retrieval-Augmented Visual Culture Understanding </div>
-        Jiaang Li, Yifei Yuan, Wenyan Li, Mohammad Aliannejadi, Daniel Hershcovich, Anders Søgaard, Ivan Vulić, <strong>Wenxuan Zhang</strong>, Paul Pu Liang, Yang Deng, Serge Belongie
-        <br>ICLR 2026
-        [<a href="https://arxiv.org/pdf/2505.14462">paper</a>] [<a href="https://github.com/yfyuan01/RAVENEA">code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8"> The Emergence of Abstract Thought in Large Language Models Beyond Any Language </div>
-        Yuxin Chen*, Yiran Zhao*, Yang Zhang, An Zhang, Kenji Kawaguchi, Shafiq Joty, Junnan Li, Tat-Seng Chua, Michael Qizhe Shieh☨, <strong>Wenxuan Zhang☨</strong>
-        <br>NeurIPS 2025
-        [<a href="https://arxiv.org/abs/2506.09890">paper</a>] [<a href="https://github.com/chenyuxin1999/Abstract_Thought">code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8"> The Rise of Parameter Specialization for Knowledge Storage in Large Language Models </div>
-        Yihuai Hong, Yiran Zhao, Wei Tang, Yang Deng, Yu Rong, <strong>Wenxuan Zhang☨</strong>
-        <br>NeurIPS 2025
-        [<a href="https://arxiv.org/abs/2505.17260">paper</a>] [<a href="">code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8"> Reframe Your Life Story: Interactive Narrative Therapist and Innovative Moment Assessment with Large Language Models </div>
-        Yi Feng, Jiaqi Wang, <strong>Wenxuan Zhang</strong>, Zhuang Chen, Yutong Shen, Xiyao Xiao, Minlie Huang, Liping Jing, Jian Yu
-        <br>EMNLP 2025
-        [<a href="https://arxiv.org/pdf/2507.20241">paper</a>] [<a href="https://github.com/MIMIFY/narrative-therapy-llm">code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">Disentangling Language and Culture for Evaluating Multilingual Large Language Models</div>
-        Jiahao Ying, Wei Tang, Yiran Zhao, Yixin Cao, Yu Rong, <strong>Wenxuan Zhang☨</strong>
-        <br>ACL 2025
-        [<a href="hhttps://arxiv.org/abs/2505.24635">paper</a>] [<a href="https://yingjiahao14.github.io/Dual-Evaluation/">project page</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">Auto-Arena: Automating LLM Evaluations with Agent Peer Battles and Committee Discussions</div>
-        Ruochen Zhao, <strong>Wenxuan Zhang☨</strong>, Yew Ken Chia, Deli Zhao, Lidong Bing
-        <br>ACL 2025
-        [<a href="https://arxiv.org/abs/2405.20267">paper</a>] [<a href="https://auto-arena.github.io/">project page</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">Pruning General Large Language Models into Customized Expert Models</div>
-        Yirao Zhao, Guizhen Chen, Kenji Kawaguchi, Lidong Bing, <strong>Wenxuan Zhang☨</strong>
-        <br>ACL-Findings 2025
-        [<a href="https://arxiv.org/abs/2506.02561">paper</a>] [<a href="https://github.com/zhaoyiran924/Custom-Prune">code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">JsonTuning: Towards Generalizable, Robust, and Controllable Instruction Tuning</div>
-        Chang Gao, <strong>Wenxuan Zhang☨</strong>, Guizhen Chen, Wai Lam
-        <br>ACL-Findings 2025
-        [<a href="https://arxiv.org/abs/2310.02953">paper</a>] [<a href="https://github.com/gao-xiao-bai/JsonTuning">data&code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">Assessing Judging Bias in Large Reasoning Models: An Empirical Study</div>
-        Qian Wang, Zhanzhi Lou, Zhenheng Tang, Nuo Chen, Xuandong Zhao, <strong>Wenxuan Zhang</strong>, Dawn Song, Bingsheng He
-        <br>COLM 2025
-        [<a href="https://arxiv.org/abs/2504.09946">paper</a>] [<a href="">code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">Understanding and Enhancing Safety Mechanisms of LLMs via Safety-Specific Neuron</div>
-        Yiran Zhao, <strong>Wenxuan Zhang</strong>, Yuxi Xie, Anirudh Goyal, Kenji Kawaguchi, Michael Shieh
-        <br>ICLR 2025
-        [<a href="https://openreview.net/forum?id=yR47RmND1m">paper</a>] [<a href="https://github.com/zhaoyiran924/Safety-Neuron">data&code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">SeaLLMs 3: Open Foundation and Chat Multilingual Large Language Models for Southeast Asian Languages</div>
-        <strong>Wenxuan Zhang*</strong>, Hou Pong Chan*, Yiran Zhao*, Mahani Aljunied*, Jianyu Wang*, Chaoqun Liu, Yue Deng, Zhiqiang Hu, Weiwen Xu, Yew Ken Chia, Xin Li, Lidong Bing
-        <br>NAACL 2025 System Demostration
-        [<a href="https://arxiv.org/abs/2407.19672">paper</a>] [<a href="https://damo-nlp-sg.github.io/SeaLLMs/">project page</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8"></span>Is Translation All You Need? A Study on Solving Multilingual Tasks with Large Language Models</div>
-        Chaoqun Liu, <strong>Wenxuan Zhang☨</strong>, Yiran Zhao, Anh Tuan Luu, Lidong Bing
-        <br>NAACL 2025
-        [<a href="https://arxiv.org/abs/2403.10258">paper</a>] [<a href="">code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">AdaMergeX: Cross-Lingual Transfer with Large Language Models via Adaptive Adapter Merging        </div>
-        Yiran Zhao, <strong>Wenxuan Zhang☨</strong>, Huiming Wang, Kenji Kawaguchi, Lidong Bing
-        <br>NAACL 2025
-        [<a href="https://arxiv.org/abs/2402.18913">paper</a>] [<a href="https://github.com/DAMO-NLP-SG/AdaMergeX">data&code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8"> Zero-to-Strong Generalization: Eliciting Strong Capabilities of Large Language Models Iteratively without Gold Labels </div>
-        Chaoqun Liu, Qin Chao, <strong>Wenxuan Zhang☨</strong>, Xiaobao Wu, Boyang Li, Anh Tuan Luu, Lidong Bing
-        <br>COLING 2025
-        [<a href="https://arxiv.org/abs/2409.12425">paper</a>] [<a href="">code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">How do Large Language Models Handle Multilingualism?</div>
-        Yiran Zhao, <strong>Wenxuan Zhang☨</strong>, Guizhen Chen, Kenji Kawaguchi, Lidong Bing
-        <br>NeurIPS 2024
-        [<a href="https://arxiv.org/abs/2402.18815">paper</a>] [<a href="https://github.com/DAMO-NLP-SG/multilingual_analysis">data&code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8"> On the Multi-turn Instruction Following for Conversational Web Agents </div>
-        Yang Deng*, Xuan Zhang*, <strong>Wenxuan Zhang</strong>, Yifei Yuan, See-Kiong Ng, Tat-Seng Chua
-        <br>ACL 2024
-        [<a href="https://arxiv.org/pdf/2402.15057">paper</a>] [<a href="https://github.com/magicgh/self-map">code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8"> SeaLLMs -- Large Language Models for Southeast Asia </div>
-        Xuan-Phi Nguyen*, <strong>Wenxuan Zhang*</strong>, Xin Li*, Mahani Aljunied*, Qingyu Tan, Liying Cheng, Guanzheng Chen, Yue Deng, Sen Yang, Chaoqun Liu, Hang Zhang, Lidong Bing
-        <br>ACL 2024 System Demostration
-        [<a href="https://arxiv.org/abs/2312.00738">paper</a>] [<a href="https://github.com/DAMO-NLP-SG/SeaLLMs">code</a>] [<a href="https://huggingface.co/SeaLLMs/SeaLLM-Chat-13b">demo</a>] 
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8"> Multilingual Jailbreak Challenges in Large Language Models</div>
-        Yue Deng, <strong>Wenxuan Zhang☨</strong>, Sinno Jialin Pan, Lidong Bing
-        <br>ICLR 2024
-        [<a href="https://arxiv.org/abs/2310.06474">paper</a>] [<a href="https://github.com/DAMO-NLP-SG/multilingual-safety-for-LLMs">data&code</a>]
-        <br><span style="color:orangered;">Top 3% cited papers at ICLR 2024 (<a href="https://github.com/qianlanwyd/paper-citation-ranking/tree/master">as of Dec 2024</a>)</span>
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">Plug-and-Play Policy Planner for Large Language Model Powered Dialogue Agents</div>
-        Yang Deng, <strong>Wenxuan Zhang☨</strong>, Wai Lam, See-Kiong Ng, Tat-Seng Chua
-        <br>ICLR 2024 
-        [<a href="https://arxiv.org/abs/2311.00262">paper</a>] [<a href="">data&code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">Sentiment Analysis in the Era of Large Language Models: A Reality Check</div>
-        <strong>Wenxuan Zhang</strong>*, Yue Deng*, Bing Liu, Sinno Jialin Pan, Lidong Bing
-        <br>Findings of NAACL 2024
-        [<a href="https://arxiv.org/abs/2305.15005">paper</a>] [<a href="https://github.com/DAMO-NLP-SG/LLM-Sentiment">data&code</a>]
-      </li>
-      <p> </p>
-      
-      <li>
-        <div id="text" style = "color:#1f57b8">M3Exam: A Multilingual, Multimodal, Multilevel Benchmark for Examining Large Language Models</div>
-        <strong>Wenxuan Zhang</strong>, Sharifah Mahani Aljunied, Chang Gao, Yew Ken Chia, Lidong Bing
-        <br>NeurIPS 2023 (Datasets and Benchmarks)
-        [<a href="https://arxiv.org/abs/2306.05179">paper</a>] [<a href="https://github.com/DAMO-NLP-SG/M3Exam">data&code</a>]
-      </li>
-      <p> </p>
-      
-      <li>
-        <div id="text" style = "color:#1f57b8">From Clozing to Comprehending: Retrofitting Pre-trained Language Model to Pre-trained Machine Reader</div>
-        Weiwen Xu, Xin Li, <strong>Wenxuan Zhang</strong>, Meng Zhou, Wai Lam, Luo Si, Lidong Bing.
-        <br>NeurIPS 2023 [<a href="hhttps://arxiv.org/abs/2212.04755">paper</a>] [<a href="https://github.com/DAMO-NLP-SG/PMR">data&code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">SOUL: Towards Sentiment and Opinion Understanding of Language</div>
-        Yue Deng, <strong>Wenxuan Zhang☨</strong>, Sinno Jialin Pan, Lidong Bing.
-        <br>EMNLP 2023 [<a href="https://arxiv.org/abs/2310.17924">paper</a>] [<a href="https://github.com/DAMO-NLP-SG/SOUL">data&code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">Knowledge-enhanced Mixed-initiative Dialogue System for Emotional Support Conversations</div>
-        Yang Deng, <strong>Wenxuan Zhang</strong>, Yifei Yuan, Wai Lam.
-        <br>ACL 2023 [<a href="">paper</a>] [<a href="">data&code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">Product Question Answering in E-Commerce: A Survey</div>
-        Yang Deng, <strong>Wenxuan Zhang</strong>, Qian Yu, Wai Lam.
-        <br>ACL 2023 [<a href="">paper</a>] [<a href="">data&code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">Bidirectional Generative Framework for Cross-domain Aspect-based Sentiment Analysis</div>
-        Yue Deng, <strong>Wenxuan Zhang☨</strong>, Sinno Jialin Pan, Lidong Bing.
-        <br>ACL 2023 [<a href="https://arxiv.org/abs/2305.09509/">paper</a>] [<a href="https://github.com/DAMO-NLP-SG/BGCA">data&code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">Easy-to-Hard Learning for Information Extraction</div>
-        Chang Gao, <strong>Wenxuan Zhang☨</strong>, Wai Lam, Lidong Bing.
-        <br>Findings of ACL 2023 [<a href="https://arxiv.org/abs/2305.09193">paper</a>] [<a href="https://github.com/DAMO-NLP-SG/IE-E2H">data&code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">Zero-Shot Text Classification via Self-Supervised Tuning</div>
-        Chaoqun Liu, <strong>Wenxuan Zhang☨</strong>, Guizhen Chen, Xiaobao Wu, Anh Tuan Luu, Chip Hong Chang, Lidong Bing.
-        <br>Findings of ACL 2023 [<a href="https://arxiv.org/abs/2305.11442">paper</a>] [<a href="https://github.com/DAMO-NLP-SG/SSTuning">data&code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">A Unified Multi-task Learning Framework for Multi-goal Conversational Recommender Systems</div>
-        Yang Deng, <strong>Wenxuan Zhang☨</strong>, Weiwen Xu, Wenqiang Lei, Tat-Seng Chua, Wai Lam
-        <br>TOIS 2023 [<a href="https://arxiv.org/abs/2203.01054">paper</a>] [<a href="https://github.com/dengyang17/unimind">data&code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">A Survey on Aspect-Based Sentiment Analysis: Tasks, Methods, and Challenges</div>
-        <strong>Wenxuan Zhang</strong>, Xin Li, Yang Deng, Lidong Bing, Wai Lam
-        <br>TKDE 2022 [<a href="https://arxiv.org/abs/2203.01054">paper</a>] [<a href="https://github.com/IsakZhang/ABSA-Survey">resources</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">PACIFIC: Towards Proactive Conversational Question Answering over Tabular and Textual Data in Finance</div>
-        Yang Deng, Wenqiang Lei, <strong>Wenxuan Zhang</strong>, Wai Lam, Tat-Seng Chua.
-        <br>EMNLP 2022 [<a href="https://dengyang17.github.io/files/EMNLP22-PACIFIC.pdf">paper</a>] [<a href="https://github.com/dengyang17/PACIFIC">data&code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">UniGDD: A Unified Generative Framework for Goal-Oriented Document-Grounded Dialogue</div>
-        Chang Gao, <strong>Wenxuan Zhang</strong>, Wai Lam
-        <br>ACL 2022 [<a href="https://aclanthology.org/2022.acl-short.66/">paper</a>] [<a href="https://github.com/gao-xiao-bai/UniGDD">data&code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">User Satisfaction Estimation with Sequential Dialogue Act Modeling in Goal-oriented Conversational Systems</div>
-        Yang Deng, <strong>Wenxuan Zhang</strong>, Wai Lam, Hong Cheng, Helen Meng
-        <br>WWW 2022 [<a href="https://arxiv.org/abs/2202.02912">paper</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">Aspect Sentiment Quad Prediction as Paraphrase Generation</div>
-        <strong>Wenxuan Zhang</strong>, Yang Deng, Xin Li, Yifei Yuan, Lidong Bing, Wai Lam
-        <br>EMNLP 2021 [<a href="https://aclanthology.org/2021.emnlp-main.726/">paper</a>] [<a href="https://github.com/isakzhang/absa-quad">data&code</a>]
-        <br><span style="color:orangered;">Top 2% cited papers at EMNLP 2021 (<a href="https://github.com/qianlanwyd/paper-citation-ranking/tree/master">as of Dec 2024</a>)</span>
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">Cross-lingual Aspect-based Sentiment Analysis with Aspect Term Code-Switching</div>
-        <strong>Wenxuan Zhang</strong>, Ruidan He, Haiyun Peng, Lidong Bing, Wai Lam
-        <br>EMNLP 2021 [<a href="https://aclanthology.org/2021.emnlp-main.727/">paper</a>] [<a href="https://github.com/isakzhang/xabsa">data&code</a>]
-      </li>
-      <p> </p>
-
-      <li>
-        <div id="text" style = "color:#1f57b8">Aspect-based Sentiment Analysis in Question Answering Forums</div>
-        <strong>Wenxuan Zhang</strong>, Yang Deng, Xin Li, Lidong Bing, Wai Lam
-        <br>Findings of EMNLP 2021 [<a href="https://aclanthology.org/2021.findings-emnlp.390/">paper</a>] [<a href="https://github.com/isakzhang/absa-qa">code</a>]
-      </li>
-      <p> </p>
-      
-      <li>
-        <div id="text" style = "color:#1f57b8">Towards Generative Aspect-Based Sentiment Analysis</div>
-        <strong>Wenxuan Zhang</strong>, Xin Li, Yang Deng, Lidong Bing, Wai Lam.
-        <br>ACL 2021 [<a href="https://aclanthology.org/2021.acl-short.64.pdf">paper</a>] [<a href="https://github.com/IsakZhang/Generative-ABSA">code</a>]</li>
-        <span style="color:orangered;">Top 3% cited papers at ACL 2021 (<a href="https://github.com/qianlanwyd/paper-citation-ranking/tree/master">as of Dec 2024</a>)</span>
-      <p> </p>
-    
-      <li>
-        <div id="text" style = "color:#1f57b8">AnswerFact: Fact Checking in Product Question Answering</div>
-        <strong>Wenxuan Zhang</strong>, Yang Deng, Jing Ma, Wai Lam.
-        <br>EMNLP 2020 [<a href="https://www.aclweb.org/anthology/2020.emnlp-main.188/">paper</a>] [<a href="https://drive.google.com/file/d/1JAmbLlV0b8Fm03VnNeVEXmROvj1po2lN/view?usp=sharing">data</a>] </li>
-      <p> </p>
-    
-      <li> 
-        <div id="text" style = "color:#1f57b8">Multi-hop Inference for Question-driven Summarization</div>
-        Yang Deng, <strong>Wenxuan Zhang</strong>, Wai Lam.
-        <br>EMNLP 2020 [<a href="https://www.aclweb.org/anthology/2020.emnlp-main.547/">paper</a>] [<a href="https://github.com/dengyang17/msg">code</a>]</li>
-      <p> </p>
-    
-      <li>
-        <div id="text" style = "color:#1f57b8">Answer Ranking for Product-Related Questions via Multiple Semantic Relations Modeling</div>
-        <strong>Wenxuan Zhang</strong>, Yang Deng, Wai Lam.
-        <br>SIGIR 2020 [<a href="https://arxiv.org/abs/2006.15599">arXiv</a>] </li>
-      <p> </p>
-    
-      <li> 
-        <div id="text" style = "color:#1f57b8">Review-guided Helpful Answer Identification in E-commerce</div>
-        <strong>Wenxuan Zhang</strong>, Wai Lam, Yang Deng, Jing Ma.
-        <br>WWW 2020 
-        [<a href="https://dl.acm.org/doi/abs/10.1145/3366423.3380015">paper</a>]
-        [<a href="https://github.com/isakzhang/answer-helpfulness-prediction">code</a>]</li>
-      <p> </p>
-    
-      <li> 
-        <div id="text" style = "color:#1f57b8">Exploiting BERT for End-to-End Aspect-Based Sentiment Analysis</div>
-        Xin Li, Lidong Bing, <b>Wenxuan Zhang</b> and Wai Lam.
-        <br>W-NUT@EMNLP 2019 
-        [<a href="https://www.aclweb.org/anthology/D19-5505.pdf">paper</a>]
-        [<a href="https://github.com/lixin4ever/BERT-E2E-ABSA">code</a>]</li>
+    <p class="strip-label">Open models and benchmarks from this line:</p>
+    <ul class="resource-strip">
+      <li><a href="https://damo-nlp-sg.github.io/SeaLLMs/">SeaLLMs</a></li>
+      <li><a href="https://damo-nlp-sg.github.io/SeaLLMs-Audio/">SeaLLMs-Audio</a></li>
+      <li><a href="https://babel-llm.github.io/babel-llm/">Babel</a></li>
+      <li><a href="https://arxiv.org/abs/2306.05179">M3Exam</a></li>
+      <li><a href="https://arxiv.org/abs/2606.08194">GlobeAudio</a></li>
     </ul>
-</div>
+  </div>
 
-<div id='footer'>
-  <p style="text-align:center;">Last updated: Feb 2026</p>
+  <!-- ---------- Direction 2: no longer one model, one person ---------- -->
+  <div class="cluster" id="collective">
+    <h3>Collective Intelligence</h3>
+    <p class="cluster-tagline">
+      <!-- Agents are starting to outnumber the people they were built for, and they will mostly be talking to each other. We want
+      to know what such a population does — which norms it settles on, whether designed-in diversity survives the group —
+      before it is deployed at that scale. -->
+    </p>
+    <ul class="hl-list">
+      <li class="hl">
+        <a class="hl-name" href="https://arxiv.org/abs/2606.05985">Value Diversity</a>
+        <span class="hl-desc">— treating value pluralism as a property of the collective, not of one model/agent</span>
+        <span class="pub-venue">arXiv 2026</span>
+      </li>
+      <li class="hl">
+        <a class="hl-name" href="https://arxiv.org/abs/2606.05304">What Should Agents Say?</a>
+        <span class="hl-desc">— action-state communication for efficient multi-agent systems</span>
+        <span class="pub-venue">arXiv 2026</span>
+      </li>
+      <li class="hl">
+        <a class="hl-name" href="https://inlp-lab.github.io/MoltNet/">MoltNet</a>
+        <span class="hl-desc">— emerging social behavior of AI agents in an agent-native network</span>
+        <span class="pub-venue">COLM 2026</span>
+      </li>
+      <li class="hl">
+        <a class="hl-name" href="https://arxiv.org/abs/2512.07195">MASim</a>
+        <span class="hl-desc">— multilingual agent-based simulation for social science</span>
+        <span class="pub-venue">COLM 2026</span>
+      </li>
+      <li class="hl">
+        <a class="hl-name" href="https://inlp-lab.github.io/DR-Arena/">DR-Arena</a>
+        <span class="hl-desc">— fully automated evaluation for deep research agents</span>
+        <span class="pub-venue">ACL 2026</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ---------- Direction 3: no longer assuming compute is free ---------- -->
+  <div class="cluster" id="mechanism">
+    <h3>Efficiency &amp; Mechanism</h3>
+    <p class="cluster-tagline">
+      <!-- Most deployment settings look nothing like the ones frontier models are built for — compute, data and latency are all
+      constrained. We work on models that stay capable under those limits, and on the mechanistic account that makes it
+      possible: nothing gets smaller, faster or safer until you know which parts of a model carry which behavior. -->
+    </p>
+    <ul class="hl-list">
+      <li class="hl">
+        <a class="hl-name" href="https://arxiv.org/pdf/2510.08026">PEAR</a>
+        <span class="hl-desc">— rewarding reasoning by phase entropy, so models think only where it pays</span>
+        <span class="pub-venue">ICLR 2026</span>
+      </li>
+      <li class="hl">
+        <a class="hl-name" href="https://openreview.net/forum?id=n9mXlqD2SJ">Difficulty–Diversity Filtering</a>
+        <span class="hl-desc">— selecting the fine-tuning data that is actually worth training on</span>
+        <span class="pub-venue">ICLR 2026</span>
+      </li>
+      <li class="hl">
+        <a class="hl-name" href="https://arxiv.org/abs/2505.17260">Parameter Specialization</a>
+        <span class="hl-desc">— how knowledge gets localized inside the weights</span>
+        <span class="pub-venue">NeurIPS 2025</span>
+      </li>
+      <li class="hl">
+        <a class="hl-name" href="https://arxiv.org/abs/2506.02561">Custom Pruning</a>
+        <span class="hl-desc">— turning a general LLM into a compact domain/language/task expert</span>
+        <span class="pub-venue">ACL Findings 2025</span>
+      </li>
+      <li class="hl">
+        <a class="hl-name" href="https://openreview.net/forum?id=yR47RmND1m">Safety Neurons</a>
+        <span class="hl-desc">— locating the small set of neurons that carry safety behavior</span>
+        <span class="pub-venue">ICLR 2025</span>
+      </li>
+    </ul>
+  </div>
+
+  <!-- ---------- Research grants ----------
+       Newest first, by start date. The project is the headline, so it goes on the first
+       line in bold; the agency, role, size and period are secondary and sit on the grey
+       line below. No links and no chips here — plain text reads better for a record like
+       this. Amounts are rounded: this is a homepage, not a CV. -->
+  <h2 class="section-title">Research Grants</h2>
+  <ul class="plain-list funding-list">
+    <li>
+      <strong>M3-LLM: A Holistic Framework for Multilingual, Multicultural and Multimodal LLMs</strong><br>
+      <span class="course-term">Sole PI. NRF Fellowship. SGD 2.89M. Jul 2026 – Jun 2031.</span>
+    </li>
+    <li>
+      <strong>Culturally-Aware Proactive Conversational AI for Enhancing Social Resilience in Singapore</strong><br>
+      <span class="course-term">PI. AI Singapore Research-Governance Joint Grant. SGD 1.02M. Jan 2026 – Dec 2028.</span>
+    </li>
+    <li>
+      <strong>Development of Compact and Operationally Tuned Large Language Model</strong><br>
+      <span class="course-term">PI. HTX. SGD 1.50M. Sep 2025 – Sep 2026.</span>
+    </li>
+    <li>
+      <strong>Towards Linguistically Inclusive and Computationally Efficient Large Language Models</strong><br>
+      <span class="course-term">Sole PI. SUTD Assistant Professorship (SAP) Award. SGD 500K. May 2025 – May 2028.</span>
+    </li>
+    <li>
+      <strong>LLM Architecture-Language Nexus: A Unified Analysis Framework</strong><br>
+      <span class="course-term">Co-PI. National Multi-Modal LLM Programme. SGD 4.9M (programme total). Apr 2025 – Mar 2028.</span>
+    </li>
+    <!-- Add further grants here; keep newest first. -->
+  </ul>
+
+  <!-- ---------- Awards & recognition ----------
+       One plain line each, newest first, year written out at the end of the line.
+       "Recognition" rather than "Awards" because the list mixes prizes, fellowships and
+       listings. This is the record; the narrative version lives in the bio on About. -->
+  <h2 class="section-title">Awards &amp; Recognition</h2>
+  <ul class="plain-list">
+    <li><a href="https://2026.aclweb.org/">SAC Highlight Award</a>, ACL 2026 (for DR-Arena)</li>
+    <li><a href="https://www.nrf.gov.sg/grants/nrff/">National Research Foundation (NRF) Fellow</a>, 2026</li>
+    <li><a href="https://www.forbes.com/profile/zhang-wenxuan/?list=30under30-asia-healthcare-science/">Forbes 30 Under 30 Asia</a>, 2026</li>
+    <li><a href="https://aaai.org/conference/aaai/aaai-26/new-faculty-highlights-program/">AAAI New Faculty Highlight</a>, 2026</li>
+    <li><a href="https://elsevier.digitalcommonsdata.com/datasets/btchxktzyw/8">World's Top 2% Scientists</a>, Stanford &amp; Elsevier, 2025</li>
+    <li><a href="https://www.sutd.edu.sg/about/careers/assistant-professorships/sutd-assistant-professorships">SUTD Assistant Professorship (SAP) Award</a>, 2025</li>
+    <li><a href="https://campus-talent.alibaba.com/campus/alistar?lang=en">Alibaba Star (<span class="zh" lang="zh-Hans">阿里星</span>)</a>, Alibaba Group, 2022</li>
+  </ul>
+
+</main>
+
+<footer class="site-footer">
+  Last updated: August 2026
+</footer>
 </div>
 
 </body>

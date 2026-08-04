@@ -1,312 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- 
+<!--
 The design of this website is based on https://nlp.stanford.edu/~johnhew/ and modified by Wenxuan Zhang (isakzhang AT gmail).
-PLS ask for permission & add a link to this website before you directly copy and apply to yours 
+PLS ask for permission & add a link to this website before you directly copy and apply to yours
+
+Member template — copy one block and fill in the fields. The role is carried by the
+section heading, so it is not repeated here. The "member-award" and "member-note"
+lines are optional; delete whichever you don't need.
+  <div class="member">
+    <img class="member-photo" src="img/FILE" alt="NAME">
+    <div class="member-info">
+      <div class="member-name"><a href="URL">NAME</a></div>
+      <div class="member-year">INTAKE TERM</div>
+      <div class="member-award">FELLOWSHIP</div>
+      <div class="member-note">CO-SUPERVISION / HOME INSTITUTION</div>
+      <div class="member-interests">TOPICS</div>
+    </div>
+  </div>
 -->
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Group Members</title>
-  <!-- link rel="icon" href="images/nlp_logo.jpg" / -->
+  <title> Group — iNLP Lab </title>
   <meta name="author" content="Wenxuan Zhang">
-  <meta name="keywords" content="Wenxuan Zhang, 张雯轩, Wenxuan Zhang CUHK, Isaac, NLP, Wenxuan Zhang Isaac, research group, members">
+  <meta name="keywords" content="Wenxuan Zhang, 张雯轩, iNLP Lab, SUTD, research group, members">
   <meta name="robots" content="index,follow">
-  <meta name="description" content="Members of Wenxuan Zhang's Research Group">
+  <meta name="description" content="Members of the iNLP Lab, led by Wenxuan Zhang at SUTD">
   <link rel="stylesheet" href="./styles.css">
   <link href='https://fonts.googleapis.com/css?family=PT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-134238626-1"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'UA-134238626-1');
   </script>
-
-  <style>
-    /* Additional styles for group members page */
-    .members-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 16px;
-      margin: 10px 0;
-    }
-    
-    @media (max-width: 1024px) {
-      .members-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
-    }
-    
-    @media (max-width: 768px) {
-      .members-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-      }
-    }
-    
-    @media (max-width: 480px) {
-      .members-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-      }
-    }
-    
-    .member-card {
-      text-align: center;
-      background: #fff;
-      padding: 10px;
-      border-radius: 8px;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      transition: box-shadow 0.3s ease;
-    }
-    
-    .member-card:hover {
-      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    }
-    
-    .member-photo-container {
-      position: relative;
-      width: 160px;
-      height: 160px;
-      margin: 0 auto 10px;
-    }
-    
-    .member-photo {
-      width: 160px;
-      height: 160px;
-      border-radius: 50%;
-      object-fit: cover;
-      display: block;
-      border: 2px solid #f0f0f0;
-    }
-    
-    .award-tag {
-      position: absolute;
-      bottom: -5px;
-      left: 50%;
-      transform: translateX(-50%);
-      background: linear-gradient(45deg, #ff6b35, #f7931e);
-      color: white;
-      font-size: 10px;
-      font-weight: bold;
-      padding: 2px 6px;
-      border-radius: 10px;
-      white-space: nowrap;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-      border: 1px solid rgba(255,255,255,0.3);
-    }
-    
-    .award-tag.a {
-      background: linear-gradient(45deg, #667eea, #764ba2);
-    }
-    
-    .award-tag.b {
-      background: linear-gradient(45deg, #f093fb, #f5576c);
-    }
-    
-    .member-name {
-      font-size: 17px;
-      font-weight: bold;
-      margin: 10px 0 5px;
-      color: #333;
-    }
-    
-    .member-role {
-      font-size: 14px;
-      color: #666;
-      margin: 5px 0;
-    }
-    
-    .member-interests {
-      font-size: 14px;
-      color: #888;
-      font-style: italic;
-      margin: 5px 0;
-    }
-    
-    .member-links {
-      margin-top: 10px;
-    }
-    
-    .member-links a {
-      font-size: 12px;
-      margin: 0 5px;
-      text-decoration: none;
-      color: #4285f4;
-    }
-    
-    .member-links a:hover {
-      text-decoration: underline;
-    }
-    
-    .section-title {
-      font-size: 25px;
-      font-weight: bold;
-      margin: 30px 0 15px;
-      color: #333;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 5px;
-    }
-  </style>
 </head>
 
 <body>
-  <div class="container content"> 
-  <main>
-  <div class="home">
 
-  <div class="mini-intro">
-  <img class="avatar" src="img/wxzhang-2025-square.jpg" alt="wxzhang-photo">
-
-  <h1 id="wxzhang">Wenxuan Zhang  <span style="font-family:STFangsong">张雯轩</span></h1>
-  
-  <p style="margin: 8px 0 12px;">
-  <code class="language-plaintext highlighter-rouge">wxzhang [at] sutd.edu.sg</code>
-  </p>
-
-  <p style="margin: 0 0 12px; ">
-    National Research Foundation (NRF) Fellow
-  </p>
-
-  <p style="margin: 0 0 16px; line-height: 1.6;">
-    SUTD Assistant Professor<br>
-    Information Systems Technology and Design Pillar<br>
-    Singapore University of Technology and Design
-  </p>
-
-
-  <a href="https://www.sutd.edu.sg/profile/zhang-wenxuan">Faculty Page</a> | <a href="https://scholar.google.com/citations?user=tr7MWA4AAAAJ&hl=en">Google Scholar</a> | <a href="https://www.linkedin.com/in/wenxuan-zhang-608b88153/">LinkedIn</a> | <a href="https://x.com/Wenxuan__Zhang">X (Twitter)</a> | <a href="https://www.xiaohongshu.com/user/profile/64c1d8c40000000014038c63"><span style="font-family:STFangsong">小红书</span></a>
-
-  <br><br>
-
-  <!--Navigation bar-->
-  <div id="menu">
-    <div>
-      <a href="index.html">About</a>
-    </div>
-    <div>
-      <a href="research.html">Publications</a>
-    </div>
-    <div>
-      <a href="group.html">Group</a>
-    </div>
-    <div>
-      <a href="getinvolved.html">Openings</a>
-    </div>
-    <script>
-      $(function () {
-        const current = window.location.pathname.split("/");
-        $('#menu div a').each(function(){
-          const $this = $(this);
-          // if the current path is like this link, make it active
-          if (current.indexOf($this.attr("href")) !== -1) {
-            $this.parent().addClass("now");
-          }
-        })
-      });
-    </script>
+<!-- ===== Top navigation ===== -->
+<nav class="site-nav">
+  <div class="site-nav-inner">
+    <a class="site-nav-brand" href="index.html">Wenxuan Zhang</a>
+    <ul class="site-nav-links">
+      <li><a href="index.html">About</a></li>
+      <li><a href="research.html">Research</a></li>
+      <li><a href="publications.html">Publications</a></li>
+      <li class="active"><a href="group.html">Group</a></li>
+      <li><a href="teaching.html">Teaching &amp; Service</a></li>
+      <li><a href="getinvolved.html">Openings</a></li>
+    </ul>
   </div>
-  <!--end of Navigation bar-->
-  
-  <!-- 
-  The <strong>inclusive NLP (iNLP) Lab</strong> at SUTD is driven by the belief that language technologies should benefit everyone on earth — across languages, cultures, and computing resources. We aim to build AI models that understand whatever languages people use, respect the cultures in whichever they live, remain accessible in all levels of computing access, and operate safely, reliably, and fairly in the world.
-  At its core, our mission is simple: to <strong>bring human-centered NLP to life</strong>, ensuring that AI advances genuinely benefit and empoer people.
-  <br>
-  <br>📚 We run a weekly <a href="https://github.com/iNLP-Lab/reading-group">reading group</a> where we share & discuss the latest breakthroughs in NLP and LLMs
-  <br><br>
+</nav>
+<!-- ===== end of navigation ===== -->
+
+<div class="container">
+<main>
+
+  <div class="page-head">
+    <h1>iNLP Lab</h1>
+  </div>
+
+  <!-- Deliberately general — this should still read correctly a few years from now.
+       Specific directions and papers live on the Research page. -->
+  <p>
+    The <em>inclusive</em> NLP Lab (<strong>iNLP Lab</strong>) works on natural language processing,
+    large language models, and LLM agents. 
+    The name is also the agenda: we care most about the <strong>human</strong> - languages, cultures and
+    settings that today's systems serve worst, and about what happens to those systems once they act at the scale of a population. 
+    Our work runs from building stronger models, through understanding what those
+    models actually learn, to the evaluation needed to tell the difference — see <a href="research.html">Research</a> for what we are working on now.
+  </p>
+
+  <!-- ---------- Recruiting call-out: kept near the top so it isn't missed ---------- -->
+<!--   <div class="callout">
+    📍 <strong>We are hiring.</strong> Multiple fully-funded positions are open — Postdoc (3, including multi-agent systems
+    and audio-language models), PhD (2027 Spring intake), and Visiting Students. See
+    <a href="getinvolved.html">Openings</a> for details and how to apply.
+  </div> -->
+
+  <!-- ---------- Group photo ---------- -->
+<!--   <figure class="group-photo">
+    <img src="img/group-2026.jpg" alt="iNLP Lab, 2026">
+    <figcaption>iNLP Lab, 2026</figcaption>
+  </figure> -->
+
+  <!-- ---------- Postdocs ----------
+       Staff entries (postdocs, RAs) use the "staff" variant: name + interests only, no
+       intake term / fellowship / co-supervision lines. Uncomment and fill in once hired.
+
+  <div class="member-list staff">
+    <div class="member">
+      <img class="member-photo" src="img/FILE" alt="NAME">
+      <div class="member-info">
+        <div class="member-name"><a href="URL">NAME</a></div>
+        <div class="member-interests">TOPICS</div>
+      </div>
+    </div>
+  </div>
   -->
+  <h2 class="section-title">Postdocs</h2>
+  <p class="muted">Recruiting — see <a href="getinvolved.html">Openings</a>.</p>
 
-  🔊 Interested in joining us? We have multiple fully-funded positions (Postdoc / PhD / Visiting Students) available, check out our <a href="getinvolved.html">Openings</a> page for opportunities!
-
-  <!-- PhD Students -->
-  <div class="section-title">Current Members</div>
-  <div class="members-grid">
-    <div class="member-card">
-      <div class="member-photo-container">
-        <img class="member-photo" src="img/yuhao.jpg" alt="Yuhao Wu">
+  <!-- ---------- PhD Students ---------- -->
+  <h2 class="section-title">PhD Students</h2>
+  <!-- Ordered by intake, then alphabetically by family name within each intake:
+       Wu | Hoang, Huang | Tan, Xu | Lee, Nguyen, Zhang -->
+  <div class="member-list">
+    <div class="member">
+      <img class="member-photo" src="img/yuhao.jpg" alt="Yuhao Wu">
+      <div class="member-info">
+        <div class="member-name"><a href="https://mozhu621.github.io/CV/">Yuhao Wu</a></div>
+        <div class="member-year">2023 Fall</div>
+        <div class="member-interests">LLM, Self-Evolving</div>
       </div>
-      <div class="member-name"><a href="https://mozhu621.github.io/CV/">Yuhao Wu</a></div>
-      <div class="member-role">PhD Student (2023 Fall)</div>
-      <div class="member-interests">Long Output</div>
     </div>
 
-    <div class="member-card">
-      <div class="member-photo-container">
-        <img class="member-photo" src="img/huangchen.jpg" alt="Chen Huang">
+  <div class="member">
+      <img class="member-photo" src="img/huangchen.jpg" alt="Chen Huang">
+      <div class="member-info">
+        <div class="member-name"><a href="https://albuschen.github.io/">Chen Huang</a></div>
+        <div class="member-year">2024 Fall</div>
+        <div class="member-interests">Reasoning, Efficiency</div>
       </div>
-      <div class="member-name"><a href="https://albuschen.github.io/">Chen Huang</a></div>
-      <div class="member-role">PhD Student (2024 Fall)</div>
-      <div class="member-interests">Reasoning, Efficiency</div>
-    </div>
-    
-    <div class="member-card">
-      <div class="member-photo-container">
-        <img class="member-photo" src="img/long.jpeg" alt="Long P. Hoang">
-        <div class="award-tag a">AISG PhD Fellowship</div>
-      </div>
-      <div class="member-name"><a href="https://longhp1618.github.io/">Long P. Hoang</a></div>
-      <div class="member-role">PhD Student (2024 Fall)</div>
-      <div class="member-role">co-advise w/ Prof. Wei Lu</div>
-      <div class="member-interests">Trustworthy, Optimization</div>
-    </div>
-    
-    <div class="member-card">
-      <div class="member-photo-container">
-        <img class="member-photo" src="img/ryner.png" alt="Ryner Tan">
-      </div>
-      <div class="member-name"><a href="https://rynertan.github.io/">Ryner Tan</a></div>
-      <div class="member-role">PhD Student (2025 Fall)</div>
-      <div class="member-interests">Reasoning, Safety</div>
     </div>
 
-    <div class="member-card">
-      <div class="member-photo-container">
-        <img class="member-photo" src="img/shaoyang.jpg" alt="Shaoyang Xu">
-        <div class="award-tag a">President's Graduate Fellowship</div>
+    <div class="member">
+      <img class="member-photo" src="img/long.jpeg" alt="Long P. Hoang">
+      <div class="member-info">
+        <div class="member-name"><a href="https://longhp1618.github.io/">Long P. Hoang</a></div>
+        <div class="member-year">2024 Fall</div>
+        <div class="member-award">AISG PhD Fellowship</div>
+        <div class="member-note">co-advised w/ Prof. Wei Lu</div>
+        <div class="member-interests">Trustworthy, Optimization</div>
       </div>
-      <div class="member-name"><a href="https://shaoyangxu.github.io/">Shaoyang Xu</a></div>
-      <div class="member-role">PhD Student (2025 Fall)</div>
-      <div class="member-interests">Multilinguality, Reasoning</div>
     </div>
 
-      <div class="member-card">
-      <div class="member-photo-container">
-        <img class="member-photo" src="img/yifeng.jpg" alt="Yi Feng">
+    <div class="member">
+      <img class="member-photo" src="img/ryner.png" alt="Ryner Tan">
+      <div class="member-info">
+        <div class="member-name"><a href="https://rynertan.github.io/">Ryner Tan</a></div>
+        <div class="member-year">2025 Fall</div>
+        <div class="member-interests">Multimodality, Reasoning</div>
       </div>
-      <div class="member-name"><a href="https://mimify.github.io/">Yi Feng</a></div>
-      <div class="member-role">Visiting PhD (from BJTU)</div>
-      <div class="member-interests">LLMs, Social Intelligence</div>
+    </div>
+
+    <div class="member">
+      <img class="member-photo" src="img/shaoyang.jpg" alt="Shaoyang Xu">
+      <div class="member-info">
+        <div class="member-name"><a href="https://shaoyangxu.github.io/">Shaoyang Xu</a></div>
+        <div class="member-year">2025 Fall</div>
+        <div class="member-award">President's Graduate Fellowship</div>
+        <div class="member-interests">Multilingual, Values/Diversity</div>
+      </div>
+    </div>
+
+    <div class="member">
+      <img class="member-photo" src="img/ryan.jpg" alt="Ryan Lee">
+      <div class="member-info">
+        <div class="member-name"><a href="https://www.linkedin.com/in/ryleejh/">Ryan Lee</a></div>
+        <div class="member-year">2026 Fall</div>
+        <div class="member-award">AISG PhD Fellowship</div>
+        <div class="member-interests">LLM, Mechanism</div>
+      </div>
+    </div>
+
+    <div class="member">
+      <img class="member-photo" src="img/huy.jpg" alt="Trong Huy Nguyen">
+      <div class="member-info">
+        <div class="member-name"><a href="https://github.com/NTHuyne">Trong Huy Nguyen</a></div>
+        <div class="member-year">2026 Fall</div>
+        <div class="member-note">co-advised w/ Prof. Ruochen Zhao</div>
+        <div class="member-interests">Multi-Agent System, LLM</div>
+      </div>
+    </div>
+
+    <div class="member">
+      <img class="member-photo" src="img/yiyang.jpg" alt="Yiyang Zhang">
+      <div class="member-info">
+        <div class="member-name"><a href="https://yiyangzhang-hz.github.io/">Yiyang Zhang</a></div>
+        <div class="member-year">2026 Fall</div>
+        <div class="member-interests">LLM, Agent</div>
+      </div>
     </div>
   </div>
 
-  <!-- Alumni   --> 
-  <div class="section-title">Alumni</div>
-  I was fortunate to work with many talented students / interns (during my time in industry):
-  <ul>
-    <li><a href="https://yihuaihong.github.io/">Yihuai Hong</a>: Undergraduate from SCUT -> PhD student @ NYU</li>
+  <!-- ---------- Research Assistants ---------- -->
+  <h2 class="section-title">Research Assistants</h2>
+  <div class="member-list staff">
+    <div class="member">
+      <img class="member-photo" src="img/matt.jpg" alt="Matthew Christopher Pohadi">
+      <div class="member-info">
+        <div class="member-name"><a href="https://matthewchristopherpohadi.vercel.app/">Matthew Christopher Pohadi</a></div>
+        <div class="member-interests">LLMs, Audio</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ---------- Alumni ---------- -->
+  <h2 class="section-title">Alumni</h2>
+
+  <p class="note">Students and interns I was fortunate to work with during my time in industry:</p>
+  <ul class="alumni-list">
+    <li><a href="https://yihuaihong.github.io/">Yihuai Hong</a>: Undergraduate from SCUT → PhD student @ NYU</li>
     <li><a href="https://yingjiahao14.github.io/">Jiahao Ying</a>: PhD candidate at Singapore Management University</li>
-    <li><a href="https://ruochenzhao.github.io/">Ruochen Zhao</a>: PhD at Nanyang Technological University -> Apple</li>
-    <li><a href="https://zhaoyiran924.github.io/">Yiran Zhao</a>: PhD at National University of Singapore -> Salesforce</li>
-    <li><a href="https://gao-xiao-bai.github.io/">Chang Gao</a>: PhD at The Chinese University of Hong Kong -> Alibaba Qwen</li>
+    <li><a href="https://ruochenzhao.github.io/">Ruochen Zhao</a>: PhD at Nanyang Technological University → Apple</li>
+    <li><a href="https://zhaoyiran924.github.io/">Yiran Zhao</a>: PhD at National University of Singapore → Salesforce</li>
+    <li><a href="https://gao-xiao-bai.github.io/">Chang Gao</a>: PhD at The Chinese University of Hong Kong → Alibaba Qwen</li>
     <li><a href="https://liuchaoqun.github.io/">Chaoqun Liu</a>: PhD candidate at Nanyang Technological University</li>
-    <li><a href="https://ntudy.github.io/">Yue Deng</a>: PhD at Nanyang Technological University -> MiroMind</li>
+    <li><a href="https://ntudy.github.io/">Yue Deng</a>: PhD at Nanyang Technological University → MiroMind</li>
   </ul>
 
-
-</div>
-<div id='footer'>
-  <p style="text-align:center;">Last updated: Apr 2026</p>
-</div>
-
 </main>
+
+<footer class="site-footer">
+  Last updated: August 2026
+</footer>
 </div>
 
 </body>
