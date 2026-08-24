@@ -964,6 +964,12 @@ a.pub-title:hover {
     margin-top: .45rem
 }
 
+/* recruiting note following a member section — separated by the same air as the
+   gap between two member entries, so it reads as its own line, not part of the last entry */
+.member-list + .muted {
+    margin-top: 1.6rem
+}
+
 /* ---- Group: alumni ---- */
 .alumni-list {
     padding-left: 1.2rem
