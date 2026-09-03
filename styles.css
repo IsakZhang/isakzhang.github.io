@@ -5,7 +5,9 @@
      1. Base       reset, typography, element defaults
      2. Chrome     top nav, page headings, footer
      3. Components hero, callouts, publications, group, lists
-     4. Legacy     only for courses/50040-nlp.html
+
+   The course pages under courses/ are self-contained: they carry their own
+   layout in a <style> block and only borrow the base typography from here.
 
    The page HTML carries no inline styles: to change wording edit the .html
    files, to change appearance edit this file.
@@ -977,39 +979,4 @@ a.pub-title:hover {
 
 .alumni-list li {
     margin-bottom: .3rem
-}
-
-
-/* =========================================================================
-   4. Legacy — only courses/50040-nlp.html still uses these. The main six
-      pages do not. Safe to delete once that page is brought in line with
-      the current layout.
-   ========================================================================= */
-
-.home {
-    margin-top: -3rem
-}
-
-.mini-intro {
-    max-width: 100%;
-    padding-bottom: 4rem
-}
-
-.mini-intro h1,
-.mini-intro p {
-    max-width: 75%;
-    padding-right: .5rem
-}
-
-.mini-intro h1 {
-    padding-bottom: .5rem;
-    margin-bottom: 1rem;
-    color: #515151
-}
-
-.mini-intro .avatar {
-    float: right;
-    max-width: 30%;
-    border-radius: 50%;
-    margin-bottom: 1rem
 }

@@ -4,15 +4,13 @@
 <!-- 
 The design of this website is based on https://nlp.stanford.edu/~johnhew/ and modified by Wenxuan Zhang (isakzhang AT gmail).
 Course website adapted from Wenxuan Zhang's homepage design.
-Past offerings are archived as separate pages (e.g. 50040-nlp-2025fall.html); this file always
-holds the current offering so that the link 50040-nlp.html stays stable.
 -->
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>50.040 Natural Language Processing</title>
+  <title>50.040 Natural Language Processing (Fall 2025)</title>
   <meta name="author" content="Wenxuan Zhang">
   <meta name="keywords" content="NLP, Natural Language Processing, SUTD, Course, Wenxuan Zhang">
   <meta name="robots" content="index,follow">
@@ -144,35 +142,19 @@ holds the current offering so that the link 50040-nlp.html stays stable.
 
     .schedule-table td {
       border: 1px solid #ddd;
-      padding: 8px 12px;
+      padding: 10px 12px;
       vertical-align: top;
     }
 
-    /* Each week spans two rows (Mon / Tue). Shading alternates by week rather than by
-       row so that the two lectures of one week always read as one block. */
-    .schedule-table tr.wk-alt td {
+    .schedule-table tr:nth-child(even) {
       background-color: #f9f9f9;
     }
 
-    .schedule-table tr.week-start td {
-      border-top: 2px solid #ccc;
-    }
-
-    .day {
-      color: #6b6b6b;
-      white-space: nowrap;
-    }
-
     /* Special row highlighting */
-    .recess-row td {
+    .recess-row {
       background-color: #f8f9fa !important;
       font-style: italic;
       color: #6c757d;
-    }
-
-    .holiday {
-      color: #6c757d;
-      font-style: italic;
     }
 
     /* Tags for special events */
@@ -182,7 +164,7 @@ holds the current offering so that the link 50040-nlp.html stays stable.
       border-radius: 4px;
       font-size: 0.8em;
       font-weight: bold;
-      margin: 2px 0;
+      margin: 2px;
     }
 
     .quiz-tag {
@@ -200,11 +182,10 @@ holds the current offering so that the link 50040-nlp.html stays stable.
     /* Tags for deadlines */
     .deadline {
       display: inline-block;
-      white-space: nowrap;
       padding: 2px 6px;
       border-radius: 3px;
       font-size: 0.8em;
-      margin: 2px 0;
+      margin: 2px;
       background-color: #f8d7da;
       color: #721c24;
       border: 1px solid #f5c6cb;
@@ -216,13 +197,6 @@ holds the current offering so that the link 50040-nlp.html stays stable.
 
     li {
       margin-bottom: 0.5em;
-    }
-
-    /* Pointer to past offerings */
-    .past-offering {
-      margin: 0.8em 0 0 0;
-      font-size: 0.95em;
-      color: #6b6b6b;
     }
 
     /* Footer */
@@ -247,6 +221,16 @@ holds the current offering so that the link 50040-nlp.html stays stable.
       margin-top: 0.5em;
     }
 
+    /* Archive banner */
+    .archive-note {
+      margin: 1em 0 1.5em 0;
+      padding: 0.7em 1em;
+      background: #fdf8ec;
+      border-left: 3px solid #c99a3a;
+      border-radius: 0 4px 4px 0;
+      font-size: 0.95em;
+    }
+
     /* Responsive design */
     @media (max-width: 768px) {
       .avatar {
@@ -268,7 +252,6 @@ holds the current offering so that the link 50040-nlp.html stays stable.
         margin-right: 15px;
       }
     }
-
     /* ---- Vertical rhythm -------------------------------------------------
        The site-wide styles.css sets `ul { margin-bottom: .1rem }` and gives
        bare text nodes no spacing at all, so on this page some blocks collided
@@ -336,11 +319,11 @@ holds the current offering so that the link 50040-nlp.html stays stable.
 
     /* styles.css stripes odd table rows; this schedule shades by week instead,
        so reset the stripe first and let the .wk-alt rule above take over. */
-    .schedule-table tbody td {
+    .schedule-table tbody tr:nth-child(odd) td {
       background-color: #fff;
     }
 
-    .schedule-table tr.wk-alt td {
+    .schedule-table tbody tr:nth-child(even) td {
       background-color: #f7f8f9;
     }
 
@@ -379,9 +362,12 @@ holds the current offering so that the link 50040-nlp.html stays stable.
 
   <h1 id="course-title">50.040 Natural Language Processing</h1>
   
-  <code class="language-plaintext highlighter-rouge">Fall 2026 (Term 7) | Singapore University of Technology and Design (SUTD)</code>
+  <code class="language-plaintext highlighter-rouge">Fall 2025 (Term 7) | Singapore University of Technology and Design (SUTD)</code>
 
-  <p class="past-offering">Past offering: <a href="50040-nlp-2025fall.html">Fall 2025</a></p>
+  <div class="archive-note">
+    This is the archived page of the <strong>Fall 2025</strong> offering.
+    For the current offering, see <a href="50040-nlp.html">50.040 Natural Language Processing (Fall 2026)</a>.
+  </div>
   
   <!--Navigation bar-->
   <div id="menu">
@@ -406,21 +392,20 @@ holds the current offering so that the link 50040-nlp.html stays stable.
 
   <h2 id="news">Announcements</h2>
   <div class="announce-box">
-    <p>Announcements will be made on the <a href="https://edimension.sutd.edu.sg/">eDimension platform</a> and by email.</p>
+    <p>Announcements will be made on the <a href="https://edimension.sutd.edu.sg/ultra/courses/_5746_1/cl/outline">eDimension platform</a> and by email.</p>
   </div>
 
   <h2 id="teaching-team">Teaching Team</h2>
   <div class="teaching-team">
-    <p class="label"><strong>Instructors:</strong></p>
+    <p class="label"><strong>Instructor:</strong></p>
     <ul>
       <li>Prof. <a href="https://isakzhang.github.io/">Wenxuan Zhang</a> (<code class="language-plaintext highlighter-rouge">wxzhang@sutd.edu.sg</code>)</li>
-      <li>Prof. <a href="https://www.sutd.edu.sg/profile/esther-zhao-ruochen">Esther Zhao Ruochen</a> (<code class="language-plaintext highlighter-rouge">esther_zhao@sutd.edu.sg</code>)</li>
     </ul>
 
     <p class="label"><strong>Teaching Assistants:</strong></p>
     <ul>
-      <li>Luo Renjie (<code class="language-plaintext highlighter-rouge">renjie_luo@mymail.sutd.edu.sg</code>)</li>
-      <li>Zhang Yiyang (<code class="language-plaintext highlighter-rouge">yiyang_zhang@mymail.sutd.edu.sg</code>)</li>
+      <li>Chen Huang (<code class="language-plaintext highlighter-rouge">chen_huang@mymail.sutd.edu.sg</code>)</li>
+      <li>Shaoyang Xu (<code class="language-plaintext highlighter-rouge">shaoyang_xu@mymail.sutd.edu.sg</code>)</li>
       <li>Yuhao Wu (<code class="language-plaintext highlighter-rouge">wu_yuhao@mymail.sutd.edu.sg</code>)</li>
     </ul>
   </div>
@@ -428,40 +413,39 @@ holds the current offering so that the link 50040-nlp.html stays stable.
   <h2 id="grading">Grading Policy</h2>
   <p class="section-note">Note: more details regarding the grading policy will be discussed in the first lecture.</p>
   <ul>
-    <li><strong>Attendance &amp; Participation:</strong> 10% (including 3 in-class quick quizzes)</li>
+    <li><strong>Attendance & Participation:</strong> 8% (+2% survey)</li>
     <li><strong>Assignments (Individual):</strong> 30% (10% each) </li>
-    <li><strong>Mid-term:</strong> 30% (Nov 2, during lecture time) </li>
+    <li><strong>In-class Quizzes:</strong> 30% (15% each) </li>
     <li><strong>Final (Group) Project:</strong> 30% </li>
   </ul>
 
   <h2 id="logistics">Class Information</h2>
-  <p class="label"><strong>Lectures:</strong> LT2</p>
+  <p class="label"><strong>Lectures:</strong> Room 2.505</p>
   <ul>
     <li>Monday: 1:00PM – 3:00PM</li>
-    <li>Tuesday: 12:00PM – 2:00PM</li>
+    <li>Tuesday: 1:30PM – 3:30PM</li>
     <li>Note: No recording or streaming, please come!</li>
   </ul>
 
-  <p class="label"><strong>Cohorts:</strong> Cohort Classroom 14 (2.507A, 2.507B)</p>
+  <p class="label"><strong>Cohorts:</strong> Room 1.416</p>
   <ul>
-    <li>CI01: Thursday 5:00PM – 6:00PM</li>
+    <li>CI01: Tuesday 9:30AM – 10:30AM</li>
     <li>CI02: Thursday 4:00PM – 5:00PM</li>
-    <li>CI03: Thursday 2:00PM – 3:00PM</li>
-    <li>Note: Cohorts are biweekly, check the schedule below</li>
+    <li>Note: Cohorts only in certain weeks, check schedule below</li>
   </ul>
 
   <h2 id="schedule">Course Schedule</h2>
   <p class="section-note warn">Note: the schedule is tentative and subject to change!</p>
-  <p><strong>Materials:</strong> Lecture slides and cohort materials can be found on the <a href="https://edimension.sutd.edu.sg/">eDimension platform</a>.</p>
+  <p><strong>Materials:</strong> <a href="https://edimension.sutd.edu.sg/webapps/blackboard/content/listContent.jsp?course_id=_5746_1&content_id=_205888_1">Lecture slides</a> and <a href="https://edimension.sutd.edu.sg/webapps/blackboard/content/listContent.jsp?course_id=_5746_1&content_id=_208139_1">cohort materials</a> can be found on the Edimension platform.</p>
   <div class="table-wrap">
   <table class="schedule-table">
     <colgroup>
-      <col style="width: 6%;">   <!-- Week -->
-      <col style="width: 11%;">  <!-- Date -->
-      <col style="width: 20%;">  <!-- Topics -->
-      <col style="width: 31%;">  <!-- Materials / Readings -->
-      <col style="width: 18%;">  <!-- Cohorts -->
-      <col style="width: 14%;">  <!-- Deadlines -->
+      <col style="width: 5%;">   <!-- Week -->
+      <col style="width: 8%;">  <!-- Date -->
+      <col style="width: 18%;">  <!-- Topics -->
+      <col style="width: 32%;">  <!-- Materials / Readings -->
+      <col style="width: 10%;">  <!-- Cohorts -->
+      <col style="width: 8%;">  <!-- Deadlines -->
     </colgroup>
     <thead>
       <tr>
@@ -474,222 +458,129 @@ holds the current offering so that the link 50040-nlp.html stays stable.
       </tr>
     </thead>
     <tbody>
-      <!-- Week 1 -->
-      <tr class="week-start">
-        <td rowspan="2">1</td>
-        <td class="day">Mon, 14 Sep</td>
-        <td>Course Logistics &amp; Overview</td>
-        <td>-</td>
-        <td rowspan="2">-</td>
-        <td rowspan="2">-</td>
-      </tr>
       <tr>
-        <td class="day">Tue, 15 Sep</td>
-        <td>Introduction to NLP</td>
+        <td>1</td>
+        <td>15-Sep</td>
+        <td>Course Logistics<br>Introduction to NLP</td>
+        <td>
+        </td>
+        <td>-</td>
         <td>-</td>
       </tr>
-
-      <!-- Week 2 -->
-      <tr class="week-start wk-alt">
-        <td rowspan="2">2</td>
-        <td class="day">Mon, 21 Sep</td>
-        <td>Recap on ML / Neural Networks</td>
+      <tr>
+        <td>2</td>
+        <td>22-Sep</td>
+        <td>Recap on ML/NN<br>Word Vectors</td>
         <td>
-          1. Stanford CS231n notes on <a href="http://cs231n.github.io/neural-networks-1/">neural network basics</a> and <a href="http://cs231n.github.io/optimization-2/">backpropagation</a>
+          1. Stanford CS231n note on <a href="http://cs231n.github.io/neural-networks-1/">neural network basics</a> and <a href="http://cs231n.github.io/optimization-2/">backpropagation</a><br>
+          2. <a href="http://arxiv.org/pdf/1301.3781.pdf">Efficient Estimation of Word Representations in Vector Space</a> (original word2vec paper)<br>
+          3. <a href="https://jalammar.github.io/illustrated-word2vec/">The Illustrated Word2vec</a><br>
+          4. <a href="https://arxiv.org/abs/1411.2738">word2vec Parameter Learning Explained</a>
         </td>
-        <td rowspan="2">Word2Vec Tutorial</td>
-        <td rowspan="2"><span class="deadline">HW1 Release</span></td>
-      </tr>
-      <tr class="wk-alt">
-        <td class="day">Tue, 22 Sep</td>
-        <td>Word Vectors</td>
-        <td>
-          1. <a href="http://arxiv.org/pdf/1301.3781.pdf">Efficient Estimation of Word Representations in Vector Space</a> (original word2vec paper)<br>
-          2. <a href="https://jalammar.github.io/illustrated-word2vec/">The Illustrated Word2vec</a>
-        </td>
-      </tr>
-
-      <!-- Week 3 -->
-      <tr class="week-start">
-        <td rowspan="2">3</td>
-        <td class="day">Mon, 28 Sep</td>
-        <td>Word Vectors (cont.)</td>
-        <td>
-          1. <a href="https://arxiv.org/abs/1411.2738">word2vec Parameter Learning Explained</a>
-        </td>
-        <td rowspan="2">-</td>
-        <td rowspan="2"><span class="deadline">HW1 Due</span></td>
+        <td>-</td>
+        <td><span class="deadline">Release A1</span></td>
       </tr>
       <tr>
-        <td class="day">Tue, 29 Sep</td>
-        <td>Language Models</td>
+        <td>3</td>
+        <td>29-Sep</td>
+        <td>Words and Tokens<br>Language Model</td>
         <td>
-          1. <a href="https://web.stanford.edu/~jurafsky/slp3/3.pdf">N-gram Language Models</a><br>
-          2. <a href="https://huggingface.co/learn/llm-course/chapter6/5">BPE tutorial</a> by Hugging Face
+          1. <a href="https://huggingface.co/learn/llm-course/chapter6/5">BPE tutorial</a> by Hugging Face<br>
+          2. <a href="https://web.stanford.edu/~jurafsky/slp3/3.pdf">N-gram Language Models</a>
         </td>
+        <td>Word2Vec Tutorial</td>
+        <td><span class="deadline">A1 Due</span></td>
       </tr>
-
-      <!-- Week 4 -->
-      <tr class="week-start wk-alt">
-        <td rowspan="2">4</td>
-        <td class="day">Mon, 5 Oct</td>
-        <td>RNN and Variants</td>
+      <tr>
+        <td>4</td>
+        <td>6-Oct</td>
+        <td><span class="quiz-tag">Quiz-1</span><br>RNN and Variants</td>
         <td>
           1. <a href="http://karpathy.github.io/2015/05/21/rnn-effectiveness/">The Unreasonable Effectiveness of Recurrent Neural Networks</a><br>
           2. <a href="https://colah.github.io/posts/2015-08-Understanding-LSTMs/">Understanding LSTM Networks</a>
         </td>
-        <td rowspan="2">RNN &amp; Seq2Seq Tutorial</td>
-        <td rowspan="2">-</td>
+        <td>-</td>
+        <td>-</td>
       </tr>
-      <tr class="wk-alt">
-        <td class="day">Tue, 6 Oct</td>
-        <td>Seq2Seq</td>
+      <tr>
+        <td>5</td>
+        <td>13-Oct</td>
+        <td>Seq2Seq & Attention 1<br>Seq2Seq & Attention 2</td>
         <td>
           1. <a href="https://lena-voita.github.io/nlp_course/seq2seq_and_attention.html">Sequence to Sequence (seq2seq) and Attention</a> (with good visualizations)
         </td>
-      </tr>
-
-      <!-- Week 5 -->
-      <tr class="week-start">
-        <td rowspan="2">5</td>
-        <td class="day">Mon, 12 Oct</td>
-        <td>Seq2Seq with Attention</td>
-        <td>
-          1. <a href="https://arxiv.org/abs/1409.0473">Neural Machine Translation by Jointly Learning to Align and Translate</a>
-        </td>
-        <td rowspan="2">-</td>
-        <td rowspan="2"><span class="deadline">HW2 Release</span></td>
+        <td>-</td>
+        <td><span class="deadline">Release A2</span></td>
       </tr>
       <tr>
-        <td class="day">Tue, 13 Oct</td>
-        <td>Project &amp; Practical Tips<br><span class="project-tag">Project Announce</span></td>
-        <td>
-          1. <a href="https://www.deeplearningbook.org/contents/guidelines.html">Practical Methodology</a> (<i>Deep Learning</i> book chapter)
-        </td>
+        <td>6</td>
+        <td>20-Oct</td>
+        <td>Practical Tips of NLP Project<br><span class="project-tag">Project Announce</span></td>
+        <td>1. <a href="https://www.deeplearningbook.org/contents/guidelines.html">Practical Methodology</a> (<i>Deep Learning</i> book chapter)</td>
+        <td>Transformer Tutorial</td>
+        <td><span class="deadline">A2 Due</span></td>
       </tr>
-
-      <!-- Week 6 -->
-      <tr class="week-start wk-alt">
-        <td rowspan="2">6</td>
-        <td class="day">Mon, 19 Oct</td>
-        <td>Transformers</td>
-        <td>
-          1. <a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a><br>
-          2. <a href="https://jalammar.github.io/illustrated-transformer/">The Illustrated Transformer</a>
-        </td>
-        <td rowspan="2">Transformer Tutorial</td>
-        <td rowspan="2"><span class="deadline">HW2 Due</span></td>
-      </tr>
-      <tr class="wk-alt">
-        <td class="day">Tue, 20 Oct</td>
-        <td>Transformers (cont.)</td>
-        <td>
-          1. <a href="https://nlp.seas.harvard.edu/2018/04/03/attention.html">The Annotated Transformer</a>
-        </td>
-      </tr>
-
-      <!-- Week 7 -->
-      <tr class="week-start recess-row">
+      <tr class="recess-row">
         <td>7</td>
-        <td class="day">26 Oct</td>
+        <td>27-Oct</td>
         <td colspan="4" style="text-align: center;"><strong>Recess Week</strong></td>
       </tr>
-
-      <!-- Week 8 -->
-      <tr class="week-start wk-alt">
-        <td rowspan="2">8</td>
-        <td class="day">Mon, 2 Nov</td>
-        <td><span class="quiz-tag">Mid-term</span></td>
+      <tr>
+        <td>8</td>
+        <td>3-Nov</td>
+        <td>Transformer<br>LLM Pre-training</td>
+        <td>
+          1. <a href="https://arxiv.org/abs/1706.03762.pdf">Attention Is All You Need</a><br>
+          2. <a href="https://jalammar.github.io/illustrated-transformer/">The Illustrated Transformer</a><br>
+          3. <a href="https://nlp.seas.harvard.edu/2018/04/03/attention.html">The Annotated Transformer</a><br>
+          4. <a href="https://arxiv.org/pdf/1810.04805.pdf">BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</a>
+        </td>
         <td>-</td>
-        <td rowspan="2">Mid-term Review &amp; Discussion</td>
-        <td rowspan="2">-</td>
-      </tr>
-      <tr class="wk-alt">
-        <td class="day">Tue, 3 Nov</td>
-        <td><span class="project-tag">Project Proposal Presentation</span></td>
         <td>-</td>
-      </tr>
-
-      <!-- Week 9 -->
-      <tr class="week-start">
-        <td rowspan="2">9</td>
-        <td class="day">Mon, 9 Nov</td>
-        <td class="holiday">Deepavali (no lecture)</td>
-        <td>-</td>
-        <td rowspan="2">-</td>
-        <td rowspan="2"><span class="deadline">HW3 Release</span></td>
       </tr>
       <tr>
-        <td class="day">Tue, 10 Nov</td>
-        <td>Pre-training</td>
+        <td>9</td>
+        <td>10-Nov</td>
+        <td><span class="project-tag">Project Proposal Presentation</span><br>Post-training (SFT/RLHF)</td>
         <td>
-          1. <a href="https://arxiv.org/pdf/1810.04805.pdf">BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding</a>
-        </td>
-      </tr>
-
-      <!-- Week 10 -->
-      <tr class="week-start wk-alt">
-        <td rowspan="2">10</td>
-        <td class="day">Mon, 16 Nov</td>
-        <td>Post-training (SFT, RLHF)</td>
-        <td>
-          1. <a href="https://openai.com/research/instruction-following">Aligning language models to follow instructions</a> (InstructGPT)<br>
+          1. <a href="https://openai.com/research/instruction-following">Aligning language models to follow instructions</a> (InstructGPT) <br>
           2. <a href="https://arxiv.org/abs/2210.11416">Scaling Instruction-Finetuned Language Models</a> (Flan-T5)
         </td>
-        <td rowspan="2">LLM Tutorial</td>
-        <td rowspan="2"><span class="deadline">HW3 Due</span></td>
+        <td>LLM Tutorial</td>
+        <td>-</td>
       </tr>
-      <tr class="wk-alt">
-        <td class="day">Tue, 17 Nov</td>
-        <td>Adaptation (Prompting &amp; Adapter)</td>
+      <tr>
+        <td>10</td>
+        <td>17-Nov</td>
+        <td>Efficient Adaptation<br><span class="quiz-tag">Quiz-2</span></td>
         <td>
           1. <a href="https://arxiv.org/abs/2005.14165">Language Models are Few-Shot Learners</a><br>
           2. <a href="https://arxiv.org/abs/2201.11903">Chain-of-Thought Prompting Elicits Reasoning in Large Language Models</a><br>
           3. <a href="https://arxiv.org/abs/2106.09685">LoRA: Low-Rank Adaptation of Large Language Models</a>
         </td>
-      </tr>
-
-      <!-- Week 11 -->
-      <tr class="week-start">
-        <td rowspan="2">11</td>
-        <td class="day">Mon, 23 Nov</td>
-        <td>Evaluation</td>
         <td>-</td>
-        <td rowspan="2">-</td>
-        <td rowspan="2">-</td>
+        <td><span class="deadline">Release A3</span></td>
       </tr>
       <tr>
-        <td class="day">Tue, 24 Nov</td>
-        <td>TBA</td>
+        <td>11</td>
+        <td>24-Nov</td>
+        <td>Evaluation<br>Guest Lecture on test-time compute and RL</td>
         <td>-</td>
-      </tr>
-
-      <!-- Week 12 -->
-      <tr class="week-start wk-alt">
-        <td rowspan="2">12</td>
-        <td class="day">Mon, 30 Nov</td>
-        <td>Agents</td>
-        <td>-</td>
-        <td rowspan="2">Project Q&amp;A</td>
-        <td rowspan="2">-</td>
-      </tr>
-      <tr class="wk-alt">
-        <td class="day">Tue, 1 Dec</td>
-        <td>Agents (cont.)</td>
-        <td>-</td>
-      </tr>
-
-      <!-- Week 13 -->
-      <tr class="week-start">
-        <td rowspan="2">13</td>
-        <td class="day">Mon, 7 Dec</td>
-        <td colspan="2"><span class="project-tag">Final Project Presentations</span></td>
-        <td rowspan="2">-</td>
-        <td rowspan="2">-</td>
+        <td>Help on Project</td>
+        <td><span class="deadline">A3 Due</span></td>
       </tr>
       <tr>
-        <td class="day">Tue, 8 Dec</td>
-        <td colspan="2"><span class="project-tag">Final Project Presentations</span></td>
+        <td>12</td>
+        <td>1-Dec</td>
+        <td>Advanced Topic-3<br>Advanced Topic-4</td>
+        <td>-</td>
+        <td>-</td>
+        <td>-</td>
+      </tr>
+      <tr>
+        <td>13</td>
+        <td>8-Dec</td>
+        <td colspan="4" style="text-align: center;"><span class="project-tag">Final Project Presentations</span></td>
       </tr>
     </tbody>
   </table>
@@ -698,7 +589,7 @@ holds the current offering so that the link 50040-nlp.html stays stable.
 </div>
 
 <div id='footer'>
-  <p>50.040 Natural Language Processing @ SUTD | Fall 2026 | Last updated: September 2026</p>
+  <p>50.040 Natural Language Processing @ SUTD | Fall 2025 (archived) | Last updated: September 2025</p>
 </div>
 
 </main>
